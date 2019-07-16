@@ -1,0 +1,7 @@
+connect
+open_file "C:\Projects\4269.Auxduino\V03_02_Software\V06_Implementation\Eclipse\Aurduino\iROM\Aurduino.hex"
+select_all_sections
+add_selected_sections
+program
+disconnect
+exit

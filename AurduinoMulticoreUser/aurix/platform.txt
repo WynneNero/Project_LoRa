@@ -1,0 +1,109 @@
+name=Aurduino
+version=1.6.18
+
+#C Compiler Settings: free tool chain installation
+compiler.path=C:/HighTec/toolchains/tricore/v4.9.1.0-infineon-2.0/bin/
+
+## C Compiler Settings
+compiler.c.cmd=tricore-gcc
+# Note: these includes must correspond to those in the C compiler options in the Eclipse project
+compiler.c.flags= -c -fno-common -O2 -g3 -W -Wextra -Wdiv-by-zero -Warray-bounds -Wcast-align -Wignored-qualifiers -Wformat -Wformat-security -fshort-double -DTRIBOARD_TC275C -DARDUINO_ARCH_AURIX -DUSE_IRQ -include Variant.h -mcpu=tc27xx -mversion-info -I "{runtime.hardware.path}/aurix/cores/aurduino" -I "{runtime.hardware.path}/aurix/cores/aurduino/avr" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Scu/Std" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Stm/Std" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Cpu/Irq" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Lib/DataHandling" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Cpu/Std" -I "{runtime.hardware.path}/aurix/variants/tc275" -I "{runtime.hardware.path}/aurix/cores/arduino/avr" -I "../h" -I "{runtime.hardware.path}/aurix/libraries/Ethernet/src" -I "{runtime.hardware.path}/aurix/libraries/Ethernet/src/utility" -I "{runtime.hardware.path}/aurix/libraries/LiquidCrystal" -I "{runtime.hardware.path}/aurix/libraries/SD/src" -I "{runtime.hardware.path}/aurix/libraries/SD/src/utility" -I "{runtime.hardware.path}/aurix/libraries/SPI" -I "{runtime.hardware.path}/aurix/libraries/TFTV2" -I "{runtime.hardware.path}/aurix/libraries/Wire" -I "{runtime.hardware.path}/aurix/libraries/EEPROM/src"-I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Build" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include" -I "{runtime.hardware.path}/aurix/system/libaurix/include" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Impl" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Lib" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_PinMap" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Reg" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Asclin" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Ccu6" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Cif" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Cpu" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Dma" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Dsadc" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Dts" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Emem" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Eray" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Eth" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Fce" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Flash" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Gtm" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Hssl" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/I2c" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Iom" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Msc" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Mtu" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Multican" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Port" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Psi5" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Psi5s" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Qspi" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Scu" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Sent" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Src" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/SrvSw" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Stm" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Vadc" 
+ 
+
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+
+compiler.cpp.extra_flags=
+
+compiler.ar.extra_flags=
+compiler.elf2hex.extra_flags=
+	
+compiler.ar.cmd=tricore-ar
+compiler.ar.flags=rcs
+
+compiler.objcopy.cmd=tricore-objcopy
+compiler.objcopy.eep.flags=
+
+compiler.elf2hex.flags=-O ihex
+compiler.elf2hex.cmd=tricore-objcopy
+
+compiler.elf2bin.flags=-O binary
+compiler.elf2bin.cmd=tricore-objcopy
+
+compiler.ldflags=
+compiler.size.cmd=
+
+
+## Compile c files
+recipe.c.o.pattern = "{compiler.path}{compiler.c.cmd}" {compiler.c.flags} {includes} "{source_file}" -o "{object_file}"
+
+## C++ Linker flags
+compiler.c.elf.flags=
+compiler.c.elf.cmd=tricore-g++
+
+
+## C++ Compiler Settings
+compiler.cpp.cmd=tricore-g++
+# Note: these includes must correspond to those in the C compiler options in the Eclipse project
+
+compiler.cpp.flags= -c -fno-common -O2 -g3 -W -Wextra -Wdiv-by-zero -Warray-bounds -Wcast-align -Wignored-qualifiers -Wformat -Wformat-security -fshort-double -DTRIBOARD_TC275C -DUSE_IRQ -DARDUINO_ARCH_AURIX -include Variant.h -mcpu=tc27xx -mversion-info -I "{runtime.hardware.path}/aurix/cores/aurduino" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Scu/Std" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Stm/Std" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Cpu/Irq" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Lib/DataHandling" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Cpu/Std" -I "{runtime.hardware.path}/aurix/variants/tc275" -I "{runtime.hardware.path}/aurix/cores/aurduino/avr" -I "../h" -I "{runtime.hardware.path}/aurix/libraries/Ethernet/src" -I "{runtime.hardware.path}/aurix/libraries/Ethernet/src/utility" -I "{runtime.hardware.path}/aurix/libraries/LiquidCrystal" -I "{runtime.hardware.path}/aurix/libraries/SD/src" -I "{runtime.hardware.path}/aurix/libraries/SD/src/utility" -I "{runtime.hardware.path}/aurix/libraries/SPI" -I "{runtime.hardware.path}/aurix/libraries/TFTV2" -I "{runtime.hardware.path}/aurix/libraries/Wire" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Build" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include" -I "{runtime.hardware.path}/aurix/system/libaurix/include" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Impl" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Lib" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_PinMap" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/_Reg" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Asclin" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Ccu6" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Cif" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Cpu" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Dma" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Dsadc" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Dts" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Emem" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Eray" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Eth" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Fce" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Flash" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Gtm" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Hssl" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/I2c" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Iom" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Msc" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Mtu" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Multican" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Port" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Psi5" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Psi5s" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Qspi" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Scu" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Sent" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Src" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/SrvSw" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Stm" -I "{runtime.hardware.path}/aurix/variants/tc275/iLLD/Include/Vadc" 
+ 
+
+#compiler.cpp.includes=
+
+## Compile c++ files
+recipe.cpp.o.pattern = "{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {includes} "{source_file}" -o "{object_file}"
+
+## Create archives
+archive_file_path={build.path}/{archive_file}
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{archive_file_path}" "{object_file}"
+
+compiler.cpp.elf.flags=
+compiler.cpp.elf.cmd=tricore-g++
+
+## Combine gc-sections, archives, and objects
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mcpu=tc27xx -nocrt0 "-T{build.variant.path}/{build.ldscript}" "-Wl,-Map,{build.path}/{build.project_name}.map" {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" "-L{build.path}" -Wl,--cref -Wl,--gc-sections -Wl,--start-group {object_files} "{build.variant.path}/{build.variant_system_lib}" "{build.variant.path}/libAurduino.a" "{build.variant.path}/libTrilib.a" "{build.path}/{archive_file}" -Wl,--end-group -Wl,--cref -Wl,--mem-holes -fshort-double  
+
+
+## Create eeprom
+recipe.objcopy.eep.pattern=
+
+## Create hex
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.bin"
+
+## Create hex for memtool
+# For Windows 10
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "c:/HIGHTEC/AurduinoUpload.hex"
+recipe.objcopy.bin.pattern="{compiler.path}{compiler.elf2bin.cmd}" {compiler.elf2bin.flags} "{build.path}/{build.project_name}.elf" "c:/HIGHTEC/AurduinoUpload.bin"
+
+## Compute size
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=/.text/s+([0-9]+).*
+
+
+
+# Aurix Uploader tools
+# -------------------
+
+# Call Memtool in batch mode
+
+# Not used
+tools.memtool.cmd=IMTMEMTOOL
+tools.memtool.cmd.windows=imtmemtool.exe
+tools.memtool.path=C:/Program Files (x86)/Infineon/Memtool 4.6/
+
+tools.memtool.upload.params.verbose=
+tools.memtool.upload.params.quiet=
+
+# Call Memtool in batch mode
+#Note: this locked to a TC275 version only as the {build.variant.path} cannot be used to supply the memtool input file
+#tools.memtool.upload.pattern="{path}/{cmd}" "connect open_file C:\Program Files (x86)\Arduino\hardware\aurduino\aurix\variants\tc275\AurduinoUpload.hex select_all_sections add_selected_sections program disconnect exit"
+#tools.memtool.upload.pattern="{build.variant.path}/Aurduino.bat"
+#tools.memtool.upload.pattern="c:\hightec\aurduino\Aurduino.bat"
+#tools.memtool.upload.pattern="{path}/{cmd}" "c:\hightec\aurduino\memtoolinp.bat"
+tools.memtool.upload.pattern="{path}/{cmd}" -c "C:\Program Files (x86)\Arduino\hardware\aurduino\aurix\variants\tc275/Target/Aurduino_TC27xC_das.cfg" "C:\Program Files (x86)\Arduino\hardware\aurduino\aurix\variants\tc275\memtoolinp.bat"
+
+
+
+
+

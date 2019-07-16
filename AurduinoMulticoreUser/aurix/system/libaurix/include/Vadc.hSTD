@@ -1,0 +1,16 @@
+/*
+ * Vadc.h
+ *
+ *  Created on: 17 Feb 2015
+ *      Author: mbeach
+ */
+
+#ifndef VADC_H_
+#define VADC_H_
+
+extern void VadcInit(void);
+extern void ReadVadc(void);
+
+extern unsigned int uiResult[16];
+
+#endif /* VADC_H_ */

@@ -1,0 +1,43 @@
+
+
+#ifndef MULTICAN_H
+#define MULTICAN_H 1
+
+/** CAN information */
+typedef struct
+{
+    struct
+    {
+        IfxMultican_Can        can;          /**< \brief CAN driver handle */
+        IfxMultican_Can_Node   canNode0;   /**< \brief CAN Node 0 */
+        IfxMultican_Can_Node   canNode1;   /**< \brief CAN Node 1 */
+        IfxMultican_Can_MsgObj UserCanMessage_A; /**< \brief CAN Destination Message object */
+        IfxMultican_Can_MsgObj UserCanMessage_B; /**< \brief CAN Source Message object */
+        IfxMultican_Can_MsgObj UserCanMessage_C; /**< \brief CAN Destination Message object */
+        IfxMultican_Can_MsgObj UserCanMessage_D; /**< \brief CAN Source Message object */
+
+    }drivers;
+} App_MulticanBasic;
+
+
+
+#define CAN0_TxMsgObject   1  /* Object numbers must be unique */
+#define CAN1_RxMsgObject   0
+
+#define CAN1_TxMsgObject   3
+#define CAN0_RxMsgObject   2
+
+extern App_MulticanBasic g_MulticanBasic;
+
+extern void CAN0_Init(uint32 Baudrate);
+extern void CAN1_Init(uint32 Baudrate);
+extern void CAN1_RxInit(uint32 CAN_Id, uint32 AcceptanceMask, uint8 dlc, uint32 ExtFrame, IfxMultican_MsgObjId MsgObj_Id);
+extern void CAN0_RxInit(uint32 CAN_Id, uint32 AcceptanceMask, uint8 dlc, uint32 ExtFrame, IfxMultican_MsgObjId MsgObj_Id);
+extern void CAN0_TxInit(uint32 CAN_Id, uint32 AcceptanceMask, uint8 dlc, uint32 ExtFrame, IfxMultican_MsgObjId MsgObj_Id);
+extern void CAN1_TxInit(uint32 CAN_Id, uint32 AcceptanceMask, uint8 dlc, uint32 ExtFrame, IfxMultican_MsgObjId MsgObj_Id);
+extern void CAN0_SendMessage(uint32 CAN_Id, uint32 Lowdata, uint32 Highdata, uint8 dlc);
+extern void CAN1_SendMessage(uint32 CAN_Id, uint32 Lowdata, uint32 Highdata, uint8 dlc);
+extern IfxMultican_Status CAN1_ReceiveMessage(IfxMultican_Message *msg1, uint8 dlc);
+extern IfxMultican_Status CAN0_ReceiveMessage(IfxMultican_Message *msg1, uint8 dlc);
+
+#endif

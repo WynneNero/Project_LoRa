@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422" moduleId="org.eclipse.cdt.core.settings" name="iROM">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="AurduinoMulticoreUser" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" description="" id="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422" name="iROM" parent="com.rt.hightec.buildsystem.tricore.new.configuration.excutable" postannouncebuildStep="Make hexfile" postbuildStep="tricore-objcopy -O ihex &quot;${ProjName}.elf&quot; &quot;${ProjName}.hex&quot;">
+					<folderInfo id="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422." name="/" resourcePath="">
+						<toolChain id="com.rt.hightec.buildsystem.tricore.new.toolchain.new.executable.1081370445" name="TriCore Toolchain" superClass="com.rt.hightec.buildsystem.tricore.new.toolchain.new.executable">
+							<option id="com.rt.hightec.buildsystem.tricore.new.mcpu.667028374" name="CPU type (-mcpu)" superClass="com.rt.hightec.buildsystem.tricore.new.mcpu" value="TC27xx" valueType="enumerated"/>
+							<targetPlatform archList="TriCore" binaryParser="org.eclipse.cdt.core.ELF" id="com.rt.hightec.buildsystem.tricore.new.excutable.targetplatform.2070741131" isAbstract="false" name="Infineon\TC27xC Starterkit\TriBoard_TC27xC" superClass="com.rt.hightec.buildsystem.tricore.new.excutable.targetplatform"/>
+							<builder buildPath="${workspace_loc:/Aurduino_Template_2/iROM}" id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.builder.2138543230" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="unlimited" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.builder"/>
+							<tool id="com.rt.hightec.buildsystem.tricore.new.assembler.1294769460" name="TriCore Assembler" superClass="com.rt.hightec.buildsystem.tricore.new.assembler">
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath.1539080026" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.assembler.general.includepath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../h&quot;"/>
+								</option>
+								<inputType id="com.rt.hightec.buildsystem.tricore.new.assembler.inputtype.1746059280" name="Assembler Input NO GUI" superClass="com.rt.hightec.buildsystem.tricore.new.assembler.inputtype"/>
+							</tool>
+							<tool id="com.rt.hightec.buildsystem.tricore.new.assembler.gtm.2088653422" name="TriCore GTM Assembler" superClass="com.rt.hightec.buildsystem.tricore.new.assembler.gtm">
+								<option id="gtm.opion.include.path.418420602" name="Include Paths" superClass="gtm.opion.include.path" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../h&quot;"/>
+								</option>
+								<inputType id="gtm.input.991728675" name="Assembler Input (mcs)" superClass="gtm.input"/>
+							</tool>
+							<tool id="com.rt.hightec.buildsystem.tricore.new.compiler.pcp.2039201815" name="TriCore PCP Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.pcp">
+								<option id="pcp.opion.include.path.970534262" name="Include Paths" superClass="pcp.opion.include.path" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;../h&quot;"/>
+								</option>
+								<inputType id="com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp.1419506564" name="Compiler Input (CPCP)" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp"/>
+							</tool>
+							<tool id="com.rt.hightec.buildsystem.tricore.new.compiler.c.1363275144" name="TriCore C Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.c">
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.124430166" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="TRIBOARD_TC275C"/>
+									<listOptionValue builtIn="false" value="ARDUINO_ARCH_AURIX"/>
+									<listOptionValue builtIn="false" value="USE_IRQ"/>
+								</option>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.234379491" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/cores/aurduino}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/EEPROM/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Servo/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Servo/src/aurix}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/MIDI/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Scu/Std}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Stm/Std}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Cpu/Irq}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Lib/DataHandling}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Cpu/Std}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/cores/aurduino/avr}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../h&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Ethernet/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Ethernet/src/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/LiquidCrystal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/SD/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/SD/src/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/TFTV2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Build}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/system/libaurix/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Impl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_PinMap}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Reg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Asclin}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Ccu6}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Cif}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Cpu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Dma}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Dsadc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Dts}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Emem}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Eray}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Eth}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Fce}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Flash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Gtm}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Hssl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/I2c}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Iom}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Msc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Mtu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Multican}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Psi5}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Psi5s}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Qspi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Scu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Sent}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/SrvSw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Stm}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Vadc}&quot;"/>
+								</option>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.optimization.optimization.1931028934" name="Optimization Level" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.optimization.optimization" value="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.code.optimization.speed" valueType="enumerated"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.miscellaneous.options.1678993833" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.miscellaneous.options" valueType="stringList">
+									<listOptionValue builtIn="false" value="-include Variant.h"/>
+								</option>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.optionfile.1923549255" name="Option file (@&lt;file&gt;)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.optionfile" value="" valueType="string"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.warnings.wall.713658981" name="All Warnings (-Wall)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.warnings.wall" value="false" valueType="boolean"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.debug.info.630757980" name="Debug Level" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.debug.info" value="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.debug.info.3" valueType="enumerated"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.FShortDouble.1176861680" name="Treat double as float (-fshort-double)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.FShortDouble" value="true" valueType="boolean"/>
+								<inputType id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType.33285671" name="Compiler Input (C)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType"/>
+							</tool>
+							<tool id="com.rt.hightec.buildsystem.tricore.new.compiler.cpp.1349888345" name="TriCore C++ Compiler" superClass="com.rt.hightec.buildsystem.tricore.new.compiler.cpp">
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths.1690749257" name="Include Paths" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.general.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/cores/aurduino}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/EEPROM/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Servo/src/aurix}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Servo/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/MIDI/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Scu/Std}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Stm/Std}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Cpu/Irq}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Lib/DataHandling}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Cpu/Std}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/cores/aurduino/avr}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../h&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Ethernet/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Ethernet/src/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/LiquidCrystal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/SD/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/SD/src/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/TFT}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/TFTV2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/libraries/Wire}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Build}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/system/libaurix/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Impl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_PinMap}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/_Reg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Asclin}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Ccu6}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Cif}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Cpu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Dma}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Dsadc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Dts}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Emem}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Eray}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Eth}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Fce}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Flash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Gtm}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Hssl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/I2c}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Iom}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Msc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Mtu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Multican}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Psi5}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Psi5s}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Qspi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Scu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Sent}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/SrvSw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Stm}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275/iLLD/Include/Vadc}&quot;"/>
+								</option>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.optimization.optimization.598799226" name="Optimization Level" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.optimization.optimization" value="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.code.optimization.speed" valueType="enumerated"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.miscellaneous.options.593469817" name="Other options" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.miscellaneous.options" valueType="stringList">
+									<listOptionValue builtIn="false" value="-include Variant.h"/>
+								</option>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined.1766280296" name="Defined symbols (-D)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.symbols.defined" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="USE_IRQ"/>
+									<listOptionValue builtIn="false" value="ARDUINO_ARCH_AURIX"/>
+									<listOptionValue builtIn="false" value="TRIBOARD_TC275C"/>
+								</option>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.warnings.wall.1282992477" name="All Warnings (-Wall)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.warnings.wall" value="false" valueType="boolean"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.debug.info.1355955175" name="Debug Level" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.debug.info" value="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.debug.info.3" valueType="enumerated"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.FShortDouble.467528916" name="Treat double as float (-fshort-double)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.CodeGeneration.FShortDouble" value="true" valueType="boolean"/>
+								<inputType id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.cpp.inputType.1932248626" name="Compiler Input (C++)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.cpp.inputType"/>
+							</tool>
+							<tool id="com.rt.hightec.buildsystem.tricore.new.linker.c.261540619" name="TriCore C Linker" superClass="com.rt.hightec.buildsystem.tricore.new.linker.c">
+								<option id="abstract.tool.linker.warnings.no.warn.flags.233979091" name="Do not warn about incompatible section flags (-Wl,--no-warn-flags)" superClass="abstract.tool.linker.warnings.no.warn.flags" value="true" valueType="boolean"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file.2107786151" name="Browse Linker Description File (-T)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file" value="..\ld\iROM.ld" valueType="string"/>
+							</tool>
+							<tool id="com.rt.hightec.buildsystem.tricore.new.linker.cpp.496233201" name="TriCore C++ Linker" superClass="com.rt.hightec.buildsystem.tricore.new.linker.cpp">
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath.824017155" name="Library search path (-L)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.Includepath" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/aurix/variants/tc275}&quot;"/>
+								</option>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.file.1822578728" name="Libraries (-l)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.lib.file" valueType="libFiles">
+									<listOptionValue builtIn="false" value="Aurduino"/>
+									<listOptionValue builtIn="false" value="TriLib"/>
+									<listOptionValue builtIn="false" value="iLLD_Lib_Make"/>
+								</option>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file.1016502271" name="Browse Linker Description File (-T)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.general.description.file" value="&quot;..\aurix\variants\tc275\linker_scripts\gcc\iROM.ld&quot;" valueType="string"/>
+								<option id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.noctr0.479587325" name="Exclude startup code crt0.o (-nocrt0)" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.miscellaneous.options.noctr0" value="true" valueType="boolean"/>
+								<inputType id="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.input.2074975873" name="Abstract Linker Input NO GUI" superClass="com.rt.hightec.framework.buildsystem.abstract.hightec.tool.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionalinputdependency" paths="$(ASM)"/>
+								</inputType>
+							</tool>
+							<tool id="com.rt.hightec.buildsystem.tricore.new.archiver.736978849" name="TriCore Archiver" superClass="com.rt.hightec.buildsystem.tricore.new.archiver"/>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="Sketches/AM_transmitter.cpp|Sketches/Analog16Channels.cpp|Sketches/analogOutTest_c1.cpp|Sketches/analogOutTest.cpp|Sketches/analogOutTestFixed.cpp|Sketches/AnalogTestLog.cpp|Sketches/BareMinimum.cpp|Sketches/Basic_IO.cpp|Sketches/BasicMidi.cpp|Sketches/BasicMulticore.cpp|Sketches/BeerTest.cpp|Sketches/BoardEOLtest.cpp|Sketches/BootloaderTest.cpp|Sketches/Ccu6PwmBcDemo.c|Sketches/Ccu6PwmBcDemo.h|Sketches/DCmotor.cpp|Sketches/Default.cpp|Sketches/eeprom_write.cpp|Sketches/EthernetSketch.cpp|Sketches/exampleMduino_baseV4_1.cpp|Sketches/expRFFT_32.cpp|Sketches/FloatTest.cpp|Sketches/GTM_PWM.cpp|Sketches/idlewilde22k.c|Sketches/iLLD_CAN.cpp|Sketches/iLLD_CANacc.cpp|Sketches/iLLD_CCU6.cpp|Sketches/iLLD_PWM.cpp|Sketches/iLLD_VADC.c|Sketches/InterruptMulticore.cpp|Sketches/Knob.cpp|Sketches/LCDExample.cpp|Sketches/LSM303_Test.cpp|Sketches/main_analog.cpp|Sketches/main_gtm.cpp|Sketches/main_i2c.cpp|Sketches/main_SD.cpp|Sketches/main_serial.cpp|Sketches/main.cpp|Sketches/Malloc.cpp|Sketches/MotorShield.cpp|Sketches/MultiCoreMem.cpp|Sketches/NeoPixelStrandTest.cpp|Sketches/NTP_TEST.cpp|Sketches/PinInterrupts.cpp|Sketches/PinToggle.cpp|Sketches/pitches.h|Sketches/PortAccess.cpp|Sketches/PWM_Measure.cpp|Sketches/QuadEncoder.cpp|Sketches/SerialTx.cpp|Sketches/shapes.cpp|Sketches/Sketch.cpp|Sketches/STM_Test.cpp|Sketches/strandtest.cpp|Sketches/strandtestBasic.cpp|Sketches/StringTest.cpp|Sketches/TimeTest.cpp|Sketches/ToneTest.cpp|Sketches/TriLib_expMath.cpp|Sketches/u8Bit_WavIn.h|Sketches/UnoIsTheMaster_I2C.cpp|Sketches/UnoIsTheSlave_I2C.cpp|Sketches/UnoIsTheSlave_SW_I2C.cpp|Sketches/VADC_single.cpp|Sketches/VADC_test.cpp|Sketches/WebServer.cpp|Sketches/WebserverSD_SB.cpp|Sketches/GenTimersTest.cpp|Sketches/Adafruit_LSM303_U.cpp|Sketches/CAN_BUS_TEST.cpp|Sketches/Empty.cpp|Sketches/TEST_LoRa.cpp|Sketches/TEST_LoRaV2.cpp|Sketches/TEST_LoRaV3.cpp|Sketches/TEST_P2P.cpp|Sketches/TEST_SERIAL.cpp|Sketches/projet_LoRa_V2.cpp|Sketches/projet_LoRa.cpp|Sketches/gps_test.cpp|Sketches/TEST_1.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="Aurduino_Template_2.com.rt.hightec.buildsystem.tricore.new.projectType.1195189532" name="TriCore Project" projectType="com.rt.hightec.buildsystem.tricore.new.projectType"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets>
+			<target name="clean" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>clean</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="all" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>all</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="rebuild" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>rebuild</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+		</buildTargets>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="iROM">
+			<resource resourceType="PROJECT" workspacePath="/Aurduino_Template_2"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422.;com.rt.hightec.buildsystem.tricore.new.assembler.gtm.2088653422;gtm.input.991728675">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1544651269;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1544651269.;com.rt.hightec.buildsystem.tricore.new.compiler.cpp.1294056470;com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.cpp.inputType.136636733">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422.;com.rt.hightec.buildsystem.tricore.new.compiler.pcp.2039201815;com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp.1419506564">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422.;com.rt.hightec.buildsystem.tricore.new.compiler.c.1363275144;com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType.33285671">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1544651269;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1544651269.;com.rt.hightec.buildsystem.tricore.new.compiler.pcp.469450191;com.rt.hightec.buildsystem.tricore.new.compiler.c.input.cpcp.470126127">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1544651269;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1544651269.;com.rt.hightec.buildsystem.tricore.new.compiler.c.1729912270;com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.c.inputType.247777252">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.2132755422.;com.rt.hightec.buildsystem.tricore.new.compiler.cpp.1349888345;com.rt.hightec.framework.buildsystem.abstract.hightec.tool.compiler.cpp.inputType.1932248626">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1544651269;com.rt.hightec.buildsystem.tricore.new.configuration.excutable.1544651269.;com.rt.hightec.buildsystem.tricore.new.assembler.gtm.2012818319;gtm.input.1414182859">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.rt.hightec.framework.buildsystem.HighTecGCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>
